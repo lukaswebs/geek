@@ -1,0 +1,67 @@
+.form-group{
+    margin-bottom:25px;
+    @media (max-width:767px){
+       margin-bottom:20px; 
+    }
+}
+.form-control{
+    border-radius:3px !important;
+    border:2px solid #cccccc;
+    background:#fff;
+    font-size:$font-size-p;
+    color:$text-color;
+    font-family:$text-font-stack;
+    height:68px;
+    padding:15px 20px;
+    @media (max-width:767px){
+         font-size:19px;
+         height:54px;
+         padding:10px 13px;
+    }
+}
+textarea{
+    resize: none;
+    height:200px !important;
+     @media (max-width:920px){
+        height:460px !important;
+    }
+    @media (max-width:767px){
+        height:150px !important;
+    }
+}
+.btn-send, .form-submit{
+    background:$brand-color;
+    font-size:$font-size-p;
+    color:$white-color;
+    height:74px;
+    width:100%;
+    border-radius:3px;
+    border:none;
+    transition:all 0.3s;
+    font-family:$text-font-stack;
+    @media (max-width:768px){
+        height:55px;
+        font-size:19px;
+    }
+}
+
+.btn-send:hover, .form-submit:hover{
+    opacity:0.8;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $text-color !important;
+  opacity:1 !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $text-color !important;
+  opacity:1 !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $text-color !important;
+  opacity:1 !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $text-color !important;
+  opacity:1 !important;
+}
