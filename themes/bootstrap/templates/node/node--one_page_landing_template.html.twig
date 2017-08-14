@@ -1,0 +1,133 @@
+
+    <div class="section first" id="section0">
+        {% if content.field_logo %}
+            <img src="{{ file_url(node.field_logo.entity.fileuri) }}" alt="logo" />
+        {% endif %}
+        {% if content.field_paragraph_text %}
+		<div class="contextual">
+			<p>{{ content.field_paragraph_text[0] }}</p>
+		</div>
+        {% endif %}
+		<a href="#" id="moveSectionDown" class="scroll-down moveSectionDown"></a>
+	</div>
+        
+    <div class="section illustrated" id="section1">
+        {% if content.field_section_image %}
+		<img src="{{ file_url(node.field_section_image.entity.fileuri) }}" alt="first" />
+        {% endif %}
+		<div class="contextual">
+			<h4>
+                {% if content.field_h4_dark_color_start %}
+                    {{ content.field_h4_dark_color_start[0] }}
+                {% endif %}
+                {% if content.field_h4_red_color %}
+                    <span>{{ content.field_h4_red_color[0] }}</span>
+                {% endif %}
+                {% if content.field_h4_dark_color_end %}
+                    {{ content.field_h4_dark_color_end[0] }}
+                {% endif %}
+            </h4>
+		</div>
+		<a href="#"  class="scroll-down moveSectionDown"></a>
+	</div>
+            
+    <div class="section illustrated" id="section2">
+		{% if content.field_section_3_image %}
+		<img src="{{ file_url(node.field_section_3_image.entity.fileuri) }}" alt="first" />
+        {% endif %}
+		<div class="contextual">
+			<h4>
+                {% if content.field_section_3_h4_dark_color_st %}
+                    {{ content.field_section_3_h4_dark_color_st[0] }}
+                {% endif %}
+                {% if content.field_section_3_h4_red_color %}
+                    <span>{{ content.field_section_3_h4_red_color[0] }}</span>
+                {% endif %}
+                {% if content.field_section_3_h4_dark_color_en %}
+                    {{ content.field_section_3_h4_dark_color_en[0] }}
+                {% endif %}
+            </h4>
+		</div>
+		<a href="#"  class="scroll-down moveSectionDown"></a>
+	</div>
+            
+    <div class="section illustrated" id="section3">
+		{% if content.field_section_4_image %}
+		<img src="{{ file_url(node.field_section_4_image.entity.fileuri) }}" alt="first" />
+        {% endif %}
+		<div class="contextual">
+			<h4>
+                {% if content.field_section_4_h4_dark_color_st %}
+                    {{ content.field_section_4_h4_dark_color_st[0] }}
+                {% endif %}
+                {% if content.field_section_4_h4_red_color %}
+                    <span>{{ content.field_section_4_h4_red_color[0] }}</span>
+                {% endif %}
+                {% if content.field_section_4_h4_dark_color_en %}
+                    {{ content.field_section_4_h4_dark_color_en[0] }}
+                {% endif %}
+            </h4>
+		</div>
+		<a href="#"  class="scroll-down moveSectionDown"></a>
+	</div>
+            
+    <div class="section services info" id="section4">
+		<div class="container">
+			<div class="row">
+                {% if content.field_section_title %}
+                    <h2 class="section-title">{{ content.field_section_title[0] }}</h2>
+                {% endif %}
+			</div>
+			<div class="row services-row">
+                {% if content.field_services %}
+                    {% for i, value in content.field_services %}
+                        {% if node.field_services[i].entity %}
+                            <div class="col-md-3 service-block">
+                                <span class="icon" style="background-image:url({{ file_url(node.field_services[i].entity.field_icon_image.entity.fileuri) }});"></span>
+                                <h4>{{ node.field_services[i].entity.label }}</h4>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+			</div>
+		</div>
+		<a href="#"  class="scroll-down moveSectionDown"></a>
+	</div>
+            
+    <div class="section clients info" id="section4">
+		<div class="container">
+			<div class="row">
+                {% if content.field_section_title2 %}
+                    <h2 class="section-title">{{ content.field_section_title2[0] }}</h2>
+                {% endif %}
+			</div>
+            {% if content.field_clients %}
+                <div class="regular slider">
+                    {% for i, value in content.field_clients %}
+                        {% if node.field_clients[i].entity %}
+                            <div>
+                                <img src="{{ file_url(node.field_clients[i].entity.field_logo.entity.fileuri) }}" alt="{{ node.field_clients[i].entity.label }}">
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+			
+		</div>
+		<a href="#"  class="scroll-down moveSectionDown"></a>
+	</div>
+            
+    <div class="section findus info" id="section5">
+		<div class="container">
+			<div class="row">
+				{% if content.field_section_title3 %}
+                    <h2 class="section-title">{{ content.field_section_title3[0] }}</h2>
+                    <h2 class="section-title mobile">{{ content.field_section_mobile_title[0] }}</h2>
+                {% endif %}
+			</div>
+		</div>
+		 <!-- GOOGLE MAP -->
+   		 <div id="map"></div>
+   		
+		<a href="#"  class="scroll-down moveSectionDown"></a>
+	</div>

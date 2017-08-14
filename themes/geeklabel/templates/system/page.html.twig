@@ -1,0 +1,13 @@
+{# Main #}
+{% block main %}
+    <div id="fullpage">
+        {# Content #}
+        {% block content %}
+            {{ page.content }}
+        {% endblock %}
+
+        {% if page.footer %}
+            {{ page.footer }}
+        {% endif %}
+    </div>
+{% endblock %}

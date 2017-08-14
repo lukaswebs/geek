@@ -1,0 +1,12 @@
+<div class="section contact info" id="section6">
+    <div class="container">
+        <div class="row">
+            {% if label %}
+                <h2 class="section-title">{{ label }}</h2>
+            {% endif %}
+            {% block content %}
+                {{ content }}
+            {% endblock %}
+        </div>
+    </div>
+</div>
